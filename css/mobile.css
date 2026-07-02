@@ -1,0 +1,217 @@
+@media screen and (max-width: 744px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .tton:hover {
+    font-size: 14px;
+    background: #007A7A;
+    color: inherit;
+  }
+
+  .hero__button-cream:hover {
+    font-size: 16px;
+    background: #007A7A;
+    color: #faf5ea;
+  }
+
+  .hero__button-outline:hover {
+    font-size: 16px;
+    background: #faf5ea;
+    border: none;
+    color: #18302F;
+  }
+
+  .nav {
+    width: 100%;
+  }
+
+  .nav__list {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .hero__box {
+    width: 100%;
+  }
+
+  .hero__title {
+    font-size: 48px;
+  }
+
+  .hero__lead {
+    width: 100%;
+  }
+  .about__list {
+        gap: 0;
+    flex-direction: column;
+  }
+  .about__item {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+
+  }
+  
+  .about__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .about__info {
+    padding: 0;
+  }
+  .about__box,
+  .location {
+    flex-direction: column;
+  }
+
+  .about__badge {
+    width: 200px;
+    left: 20px;
+    right: auto;
+  }
+
+  .route {
+    flex-direction: column;
+  }
+
+  .route:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .route__info {
+    order: 2;
+  }
+
+  .route__button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .route__media {
+    order: 1;
+  }
+
+  .route-modal {
+    padding: 16px;
+  }
+
+  .route-modal__close {
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+  }
+
+  .route-modal__image {
+    height: 240px;
+  }
+
+  .route-modal__info {
+    padding: 28px 20px;
+  }
+
+  .route-modal__title {
+    font-size: 24px;
+  }
+
+  .route-modal__text {
+    font-size: 15px;
+  }
+
+  .hotel-modal {
+    padding: 16px;
+  }
+
+  .hotel-modal__close {
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+  }
+
+  .hotel-modal__media {
+    height: 220px;
+    min-height: 0;
+  }
+
+  .hotel-modal__image {
+    object-position: center;
+  }
+
+  .hotel-modal__info {
+    padding: 28px 20px;
+  }
+
+  .hotel-modal__title {
+    font-size: 24px;
+  }
+
+  .hotel-modal__text {
+    font-size: 15px;
+  }
+
+  .hotel-modal__button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .floating-phone {
+    right: 16px;
+    bottom: 16px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .floating-phone__icon {
+    width: 24px;
+  }
+
+  .highlights__item,
+  .cars__item,
+  .contact__item {
+    width: 100%;
+  }
+
+  .gallery__image {
+    width: 100%;
+  }
+
+  .location__link {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .hero__button-outline {
+    padding: 15px;
+  }
+  .footer {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  .footer__copy {
+    margin: 10px 0 20px 0;
+  }
+
+.cars__slider {
+  margin-bottom: 24px;
+  width: 100%;
+  border-radius: 24px; 
+  overflow: hidden;
+}
+
+.cars__slider .cars__image {
+  aspect-ratio:3 / 4; 
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 390px) {
+  .stats__num {
+    font-size: 28px;
+  }
+}
+}

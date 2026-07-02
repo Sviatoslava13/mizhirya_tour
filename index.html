@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Міжгір'я · Джип-тур</title>
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tablet.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="index.html" class="header__link"
+          ><img src="img/logo.png" alt="Логотип" class="header__logo"
+        /></a>
+        <div class="header__box">
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+          <label for="menu-toggle" class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#location" class="nav__link">Локація</a>
+              </li>
+              <li class="nav__item">
+                <a href="#tours" class="nav__link">Маршрути</a>
+              </li>
+              <li class="nav__item">
+                <a href="#highlights" class="nav__link">Що побачите</a>
+              </li>
+              <li class="nav__item">
+                <a href="#cars" class="nav__link">Машини</a>
+              </li>
+              <li class="nav__item">
+                <a href="#gallery" class="nav__link">Галерея</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="tel:+380984112787" class="header__button">Забронювати</a>
+        </div>
+      </header>
+
+      <section class="hero">
+        <video class="hero__video" autoplay muted loop playsinline>
+          <source src="video/background_video.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__box">
+          <span class="hero__chip"
+            ><img src="img/white_mountain_icon.svg" alt="Іконка гори" />Карпати
+            · Верховина</span
+          >
+          <h1 class="hero__title">
+            Гуцульські гори
+            <span class="hero__title-accent">на повному приводі</span>
+          </h1>
+          <p class="hero__lead">
+            Гори, полонини, оглядові майданчики, водоспади та наймальовничіші
+            куточки Карпат. Везуть місцеві — родом з Верховини
+          </p>
+          <div class="hero__buttons">
+            <a href="#tours" class="hero__button-cream">Обрати тур</a>
+            <a href="#about" class="hero__button-outline">Дізнатися більше</a>
+          </div>
+          <ul class="hero__stats">
+            <li class="stats__item">
+              <span class="stats__num">8+</span
+              ><span class="stats__label">Маршрутів</span>
+            </li>
+            <li class="stats__item">
+              <span class="stats__num">8 років</span
+              ><span class="stats__label">У горах</span>
+            </li>
+            <li class="stats__item">
+              <span class="stats__num">4.9★</span
+              ><span class="stats__label">Відгуків</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="about__box">
+          <div class="about__info">
+            <span class="about__eyebrow">Про нас</span>
+            <h2 class="about__title">
+              Даруємо емоції, які залишаються в серці назавжди!
+            </h2>
+            <p class="about__lead">
+              Ми — гуцульська команда з Верховини. Виросли серед цих гір, знаємо
+              кожну стежку, кожне джерело й кожного ґазду на полонині. Наші
+              джипи перевірені на складних гірських маршрутах Чорногори, а
+              маршрути зібрані з історій, які передавали діди та місцеві
+              мандрівники
+            </p>
+            <p class="about__muted">
+              Працюємо з групами різного формату — від камерних поїздок до
+              великих виїздів і таборів до 60 людей. Головне — щоб ви відчули
+              гори, а не просто побачили їх
+            </p>
+            <ul class="about__list">
+              <li class="about__item">Місцеві гіди</li>
+              <li class="about__item">Підготовлені 4×4</li>
+              <li class="about__item">Бринза та чай</li>
+              <li class="about__item">Малі та великі групи</li>
+              <li class="about__item">Знижки для військових</li>
+            </ul>
+          </div>
+          <div class="about__media">
+            <img
+              src="img/Гора Бенджола.jpg"
+              alt="Гора Бенджола"
+              class="about__image"
+            />
+            <div class="about__badge">
+              <img
+                src="img/cyan_mountain_icon.svg"
+                alt="Іконка гори"
+                class="about__badge-icon"
+              />
+              <span class="about__badge-num">1500 м</span>
+              <span class="about__badge-label">Гора Бенджола</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="location" id="location">
+        <div class="location__box">
+          <div class="location__media">
+            <img
+              src="img/positioncar.jpg"
+              alt="Село Ільці"
+              class="location__image"
+            />
+            <a
+              href="https://maps.app.goo.gl/y5ZM4P7bYghtuD2QA"
+              target="_blank"
+              class="location__link"
+              ><img
+                src="img/pointing_arrow.svg"
+                alt="Вказівна стрілка"
+                class="location__icon-link"
+              />Відкрити на карті</a
+            >
+          </div>
+        </div>
+        <div class="location__info">
+          <span class="location__eyebrow">Де ми знаходимось</span>
+          <h2 class="location__title">Серце Гуцульщини — село Ільці</h2>
+          <p class="location__lead">
+            Серце Гуцульщини — село Ільці Наша база — у самому селі Ільці, на
+            берегах Чорного Черемошу, в Івано-Франківській області. Звідси
+            стартують усі маршрути в бік Чорногори, Гриняви та Мармароських Альп
+          </p>
+          <ul class="location__list">
+            <li class="location__item">
+              <img src="img/location.svg" alt="Карти" class="location__icon" />
+              <span class="location__title-item">Адреса</span>
+              <span class="location__text-item">Село Ільці</span>
+              <span class="location__text-item">с. Ільці, 78700</span>
+            </li>
+            <li class="location__item">
+              <img src="img/clock.svg" alt="Годинник" class="location__icon" />
+              <span class="location__title-item">Час роботи</span>
+              <span class="location__text-item">Щодня з 09:00 до 22:00</span>
+              <span class="location__text-item">Дзвінки приймаємо до 22:00</span>
+            </li>
+          </ul>
+          <p class="location__text">
+            <span class="location__arrow">Як дістатись:</span> Івано-Франківськ
+            — 130 км · Чернівці — 150 км · Львів — 260 км.
+          </p>
+        </div>
+      </section>
+
+      <section class="tours" id="tours">
+        <div class="tours__header">
+          <span class="tours__eyebrow">Маршрути</span>
+          <h2 class="tours__title">Куди поїдемо?</h2>
+          <p class="tours__lead">
+            Десять авторських маршрутів — від тихих полонин до високогірних
+            хребтів. Прокладіть пальцем дорогу від однієї пригоди до іншої
+          </p>
+        </div>
+
+        <div class="route">
+          <div class="route__info">
+            <span class="route_chip"
+              ><span class="route__number">01</span> Маршрут 1 / 10</span
+            >
+            <h3 class="route__title">Писаний Камінь</h3>
+            <p class="route__text">
+              Місце сили та загадок. Скелі з давніми написами, неймовірні
+              панорами та атмосфера, яку важко передати словами це треба відчути
+            </p>
+            <ul class="route__list">
+              <li class="route__item">₴ 4500 грн</li>
+              <li class="route__item">
+                <img
+                  src="img/green_location_icon.svg"
+                  alt="Локація"
+                  class="route__icon"
+                />
+                Легкий
+              </li>
+            </ul>
+            <button class="route__button" type="button" data-route-modal="pysanyi-kamin">
+              Детальніше
+            </button>
+          </div>
+          <div class="route__media">
+            <img
+              src="img/kamin_p.JPG"
+              alt="Писаний Камінь"
+              class="media__image"
+            />
+            <div class="media__box">
+              <span class="media__title">Писаний Камінь</span>
+              <span class="media__time"
+                ><img src="img/clock.svg" alt="Годинник" class="media__icon" />
+                3 години</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="route">
+          <div class="route__media">
+            <img
+              src="img/Полонина Кринта.jpg"
+              alt="Полонина Кринта"
+              class="media__image"
+            />
+            <div class="media__box">
+              <span class="media__title">Полонина Кринта</span>
+              <span class="media__time"
+                ><img src="img/clock.svg" alt="Годинник" class="media__icon" />
+                3 години</span
+              >
+            </div>
+          </div>
+          <div class="route__info">
+            <span class="route_chip"
+              ><span class="route__number">02</span> Маршрут 2 / 10</span
+            >
+            <h3 class="route__title">Полонина Кринта</h3>
+            <p class="route__text">
+              Один із найкрасивіших маршрутів із захопливими видами на гірські
+              хребти. Ідеально для фото та перезавантаження
+            </p>
+            <ul class="route__list">
+              <li class="route__item">₴ 4500 грн</li>
+              <li class="route__item">
+                <img
+                  src="img/green_location_icon.svg"
+                  alt="Локація"
+                  class="route__icon"
+                />
+                Легкий
+              </li>
+            </ul>
+            <button class="route__button" type="button" data-route-modal="krynta">
+              Детальніше
+            </button>
+          </div>
+        </div>
+
+        <div class="route">
+          <div class="route__info">
+            <span class="route_chip"
+              ><span class="route__number">03</span> Маршрут 3 / 10</span
+            >
+            <h3 class="route__title">Гора Бенджола</h3>
+            <p class="route__text">
+              Ідеальна локація для тих, хто хоче побачити Карпати з висоти.
+              Простори, вітер і відчуття повної свободи
+            </p>
+            <ul class="route__list">
+              <li class="route__item">₴ 4500 грн</li>
+              <li class="route__item">
+                <img
+                  src="img/green_location_icon.svg"
+                  alt="Локація"
+                  class="route__icon"
+                />
+                Середній
+              </li>
+            </ul>
+            <button class="route__button" type="button" data-route-modal="bendzhola">
+              Детальніше
+            </button>
+          </div>
+          <div class="route__media">
+            <img
+              src="img/Гора Бенджола.jpg"
+              alt="Гора Бенджола"
+              class="media__image media__image--b"
+            />
+            <div class="media__box">
+              <span class="media__title">Гора Бенджола</span>
+              <span class="media__time"
+                ><img src="img/clock.svg" alt="Годинник" class="media__icon" />
+                3 години</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="route">
+          <div class="route__media">
+            <img
+              src="img/Гора Біла Кобила.png"
+              alt="Гора Біла Кобила"
+              class="media__image"
+            />
+            <div class="media__box">
+              <span class="media__title">Гора Біла Кобила</span>
+              <span class="media__time"
+                ><img src="img/clock.svg" alt="Годинник" class="media__icon" />
+                2 години</span
+              >
+            </div>
+          </div>
+          <div class="route__info">
+            <span class="route_chip"
+              ><span class="route__number">04</span> Маршрут 4 / 10</span
+            >
+            <h3 class="route__title">Гора Біла Кобила</h3>
+            <p class="route__text">
+              Відкритий трав'янистий хребет з 360° панорамою Чорногори та
+              Гриняви. Вітер і простір
+            </p>
+            <ul class="route__list">
+              <li class="route__item">₴ 3500 грн</li>
+              <li class="route__item">
+                <img
+                  src="img/green_location_icon.svg"
+                  alt="Локація"
+                  class="route__icon"
+                />
+                Середній
+              </li>
+            </ul>
+            <button class="route__button" type="button" data-route-modal="bila-kobyla">
+              Детальніше
+            </button>
+          </div>
+        </div>
+
+        <div class="route">
+          <div class="route__info">
+            <span class="route_chip"
+              ><span class="route__number">05</span> Маршрут 5 / 10</span
+            >
+            <h3 class="route__title">Полонина Псарівка</h3>
+            <p class="route__text">
+              Тут починається справжній дух гір тиша, зелені схили та традиційне
+              пастуше життя
+            </p>
+            <ul class="route__list">
+              <li class="route__item">₴ 4500 грн</li>
+              <li class="route__item">
+                <img
+                  src="img/green_location_icon.svg"
+                  alt="Локація"
+                  class="route__icon"
+                />
+                Легкий
+              </li>
+            </ul>
+            <button class="route__button" type="button" data-route-modal="psarivka">
+              Детальніше
+            </button>
+          </div>
+          <div class="route__media">
+            <img
+              src="img/Полонина Псарівка.png"
+              alt="Полонина Псарівка"
+              class="media__image"
+            />
+            <div class="media__box">
+              <span class="media__title">Полонина Псарівка</span>
+              <span class="media__time"
+                ><img src="img/clock.svg" alt="Годинник" class="media__icon" />
+                3 години</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="route">
+          <div class="route__media">
+            <img src="img/Снідавка.png" alt="Снідавка" class="media__image" />
+            <div class="media__box">
+              <span class="media__title">Снідавка</span>
+              <span class="media__time"
+                ><img src="img/clock.svg" alt="Годинник" class="media__icon" />
+                4-5 годин</span
+              >
+            </div>
+          </div>
+          <div class="route__info">
+            <span class="route_chip"
+              ><span class="route__number">06</span> Маршрут 6 / 10</span
+            >
+            <h3 class="route__title">Снідавка</h3>
+            <p class="route__text">
+              Особливе місце з панорамою на гори та символічною атмосферою
+              спокою і сили.
+            </p>
+            <ul class="route__list">
+              <li class="route__item">₴ 7000 грн</li>
+              <li class="route__item">
+                <img
+                  src="img/green_location_icon.svg"
+                  alt="Локація"
+                  class="route__icon"
+                />
+                Легкий
+              </li>
+            </ul>
+            <button class="route__button" type="button" data-route-modal="snidavka">
+              Детальніше
+            </button>
+          </div>
+        </div>
+
+        <div class="route">
+          <div class="route__info">
+            <span class="route_chip"
+              ><span class="route__number">07</span> Маршрут 7 / 10</span
+            >
+            <h3 class="route__title">Памір — гора Томнатик</h3>
+            <p class="route__text">
+              Високогірний маршрут до легендарних радіолокаційних куполів на
+              горі Томнатик. Дорога для тих, хто хоче справжньої гірської
+              пригоди.
+            </p>
+            <ul class="route__list">
+              <li class="route__item">Ціну уточнюйте</li>
+              <li class="route__item">
+                <img
+                  src="img/green_location_icon.svg"
+                  alt="Локація"
+                  class="route__icon"
+                />
+                Складний
+              </li>
+            </ul>
+            <button class="route__button" type="button" data-route-modal="pamir">
+              Детальніше
+            </button>
+          </div>
+          <div class="route__media">
+            <img src="img/pamir.JPG" alt="Памір — гора Томнатик" class="media__image" />
+            <div class="media__box">
+              <span class="media__title">Памір — гора Томнатик</span>
+              <span class="media__time"
+                ><img src="img/clock.svg" alt="Годинник" class="media__icon" />
+                1 день</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="route">
+          <div class="route__media">
+            <img
+              src="img/maksymets.jpeg"
+              alt="Максимець полонина"
+              class="media__image"
+            />
+            <div class="media__box">
+              <span class="media__title">Полонина Максимець </span>
+              <span class="media__time"
+                ><img src="img/clock.svg" alt="Годинник" class="media__icon" />
+                1 день</span
+              >
+            </div>
+          </div>
+          <div class="route__info">
+            <span class="route_chip"
+              ><span class="route__number">08</span> Маршрут 8 / 10</span
+            >
+            <h3 class="route__title">Полонина Максимець</h3>
+            <p class="route__text">
+              Складний маршрут на полонину для тих, хто любить дикіші дороги,
+              відкриті простори, фотозони та гойдалки над карпатськими
+              краєвидами.
+            </p>
+            <ul class="route__list">
+              <li class="route__item">Ціну уточнюйте</li>
+              <li class="route__item">
+                <img
+                  src="img/green_location_icon.svg"
+                  alt="Локація"
+                  class="route__icon"
+                />
+                Складний
+              </li>
+            </ul>
+            <button class="route__button" type="button" data-route-modal="maksymets">
+              Детальніше
+            </button>
+          </div>
+        </div>
+
+        <div class="route">
+          <div class="route__info">
+            <span class="route_chip"
+              ><span class="route__number">09</span> Маршрут 9 / 10</span
+            >
+            <h3 class="route__title">Полонина Кострича</h3>
+            <p class="route__text">
+              Маршрут до мальовничої полонини з краєвидами на карпатські
+              хребти, зеленими схилами та спокійною атмосферою гір.
+            </p>
+            <ul class="route__list">
+              <li class="route__item">Ціну уточнюйте</li>
+              <li class="route__item">
+                <img
+                  src="img/green_location_icon.svg"
+                  alt="Локація"
+                  class="route__icon"
+                />
+               Легкий
+              </li>
+            </ul>
+            <button class="route__button" type="button" data-route-modal="kostrycha">
+              Детальніше
+            </button>
+          </div>
+          <div class="route__media">
+            <img
+              src="img/kostrich.jpg"
+              alt="Полонина Кострича"
+              class="media__image"
+            />
+            <div class="media__box">
+              <span class="media__title">Полонина Кострича</span>
+              <span class="media__time"
+                ><img src="img/clock.svg" alt="Годинник" class="media__icon" />
+                1 день</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="route">
+          <div class="route__media">
+            <img src="img/burkut.jpeg" alt="Буркут" class="media__image" />
+            <div class="media__box">
+              <span class="media__title">Буркут</span>
+              <span class="media__time"
+                ><img src="img/clock.svg" alt="Годинник" class="media__icon" />
+                1 день</span
+              >
+            </div>
+          </div>
+          <div class="route__info">
+            <span class="route_chip"
+              ><span class="route__number">10</span> Маршрут 10 / 10</span
+            >
+            <h3 class="route__title">Буркут</h3>
+            <p class="route__text">
+              Атмосферний маршрут до відомої гірської локації Буркут із
+              джерелами води, лісовими дорогами та зупинками для відпочинку
+              серед природи.
+            </p>
+            <ul class="route__list">
+              <li class="route__item">Ціну уточнюйте</li>
+              <li class="route__item">
+                <img
+                  src="img/green_location_icon.svg"
+                  alt="Локація"
+                  class="route__icon"
+                />
+                Легкий
+              </li>
+            </ul>
+            <button class="route__button" type="button" data-route-modal="burkut">
+              Детальніше
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="route-modal" id="route-modal" aria-hidden="true">
+        <div class="route-modal__overlay" data-modal-close></div>
+        <div class="route-modal__content" role="dialog" aria-modal="true" aria-labelledby="route-modal-title">
+          <button class="route-modal__close" type="button" aria-label="Закрити" data-modal-close>
+            ×
+          </button>
+          <img src="" alt="" class="route-modal__image" />
+          <div class="route-modal__info">
+            <span class="route-modal__eyebrow">Деталі маршруту</span>
+            <h3 class="route-modal__title" id="route-modal-title"></h3>
+            <p class="route-modal__text"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-modal" id="hotel-modal" aria-hidden="true">
+        <div class="hotel-modal__overlay" data-hotel-close></div>
+        <div class="hotel-modal__content" role="dialog" aria-modal="true" aria-labelledby="hotel-modal-title">
+          <button class="hotel-modal__close" type="button" aria-label="Закрити" data-hotel-close>
+            ×
+          </button>
+          <div class="hotel-modal__media">
+            <img src="img/hotel.jpeg" alt="Готель Міжгірʼя" class="hotel-modal__image" />
+          </div>
+          <div class="hotel-modal__info">
+            <span class="hotel-modal__eyebrow">Де зупинитися</span>
+            <h3 class="hotel-modal__title" id="hotel-modal-title">Готель “Міжгірʼя”</h3>
+            <p class="hotel-modal__text">
+              Плануєте тур на кілька днів? У селі Устеріки є готель “Міжгірʼя”,
+              де гості можуть зупинитися та переночувати у самому серці Карпат.
+              Це зручний варіант для відпочинку після маршруту або перед раннім
+              виїздом у гори.
+            </p>
+            <a href="tel:+380984112787" class="hotel-modal__button">Зателефонувати</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="highlights" id="highlights">
+        <div class="highlights__box">
+          <span class="highlights__eyebrow">Що чекає на маршрутах</span>
+          <h2 class="highlights__title">Що ви побачите й скуштуєте</h2>
+          <p class="highlights__lead">
+            Кожна локація — це не лише фото, а й історія, смак і запах живих
+            Карпат
+          </p>
+        </div>
+        <ul class="highlights__list">
+          <li class="highlights__item">
+            <img
+              src="img/background_mountain_icon.svg"
+              alt="Гора"
+              class="highlights__icon"
+            />
+            <h3 class="highlights__subtitle">Полонини й вівчарі</h3>
+            <p class="highlights__text">
+              Відвідаєте мальовничі полонини, побачите життя карпатських
+              вівчарів, колиби та неймовірні панорами гір
+            </p>
+          </li>
+          <li class="highlights__item">
+            <img
+              src="img/background_camera_icon.svg"
+              alt="Камера"
+              class="highlights__icon"
+            />
+            <h3 class="highlights__subtitle">Панорамні вершини</h3>
+            <p class="highlights__text">
+              Підніметеся позашляховиком на гірські вершини, звідки
+              відкриваються захопливі краєвиди на Карпати
+            </p>
+          </li>
+          <li class="highlights__item">
+            <img
+              src="img/background_tent_icon.svg"
+              alt="Намет"
+              class="highlights__icon"
+            />
+            <h3 class="highlights__subtitle">Гуцульські села</h3>
+            <p class="highlights__text">
+              Познайомитеся з традиційним побутом гуцулів, старовинною
+              архітектурою, місцевими ремеслами та гостинністю карпатських
+              мешканців
+            </p>
+          </li>
+          <li class="highlights__item">
+            <img
+              src="img/background_cutlery_icon.svg"
+              alt="Столові прибори"
+              class="highlights__icon"
+            />
+            <h3 class="highlights__subtitle">Місцева кухня</h3>
+            <p class="highlights__text">
+              Бринза, сир, бануш на сметані, гриби, форель з гірських потоків,
+              узвар
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="cars" id="cars">
+        <div class="cars__box">
+          <span class="cars__eyebrow">Наш автопарк</span>
+          <h3 class="cars__title">Машини, що не підводять</h3>
+          <p class="cars__lead">
+            Перевірені позашляховики з повним приводом, лебідками й шноркелями.
+            Кожен виїзд — техогляд
+          </p>
+
+          <div class="cars__slider">
+            <div class="cars__track">
+              <img
+                src="img/Машини_1.png"
+                alt="Nissan Patrol 1"
+                class="cars__image"
+              />
+              <img
+                src="img/Машини_2.jpg"
+                alt="Nissan Patrol 2"
+                class="cars__image"
+              />
+              <img
+                src="img/Машини_3.jpg"
+                alt="Nissan Patrol 3"
+                class="cars__image"
+              />
+              <img
+                src="img/Машини_4.jpg"
+                alt="Nissan Patrol 4"
+                class="cars__image"
+              />
+              <img
+                src="img/Машини_5.jpg"
+                alt="Nissan Patrol 5"
+                class="cars__image"
+              />
+            </div>
+          </div>
+
+          <ul class="cars__list">
+            <li class="cars__item">
+              <img
+                src="img/background_compass_icon.svg"
+                alt="Компас"
+                class="cars__icon"
+              />
+              <h3 class="cars__subtitle">Авторські маршрути</h3>
+              <p class="cars__text">
+                Стежки, яких немає в путівниках. Зібрані за роки життя в горах
+              </p>
+            </li>
+            <li class="cars__item">
+              <img
+                src="img/background_people_icon.svg"
+                alt="Люди"
+                class="cars__icon"
+              />
+              <h3 class="cars__subtitle">Люди</h3>
+              <p class="cars__text">
+                Формати під будь-яку компанію — від малих груп до великих
+                виїздів і таборів до 60 осіб. Гнучка організація під ваш запит
+              </p>
+            </li>
+            <li class="cars__item">
+              <img
+                src="img/background_mountain_icon.svg"
+                alt="Гора"
+                class="cars__icon"
+              />
+              <h3 class="cars__subtitle">Підготовлені позашляховики</h3>
+              <p class="cars__text">
+                Nissan Patrol — кожен джип перевірений механіком
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery">
+        <div class="gallery__box">
+          <span class="gallery__eyebrow">Галерея</span>
+          <h3 class="gallery__title">Карпати на власні очі</h3>
+        </div>
+        <div class="gallery__images">
+          <img src="img/image_1.png" alt="Краєвиди" class="gallery__image" />
+          <img src="img/image_2.png" alt="Краєвиди" class="gallery__image" />
+          <img src="img/image_3.png" alt="Краєвиди" class="gallery__image" />
+          <img src="img/image_4.png" alt="Краєвиди" class="gallery__image" />
+          <img src="img/image_5.png" alt="Краєвиди" class="gallery__image" />
+          <img src="img/image_6.png" alt="Краєвиди" class="gallery__image" />
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact__box">
+          <span class="contact__eyebrow">Контакти</span>
+          <h2 class="contact__title">Готові у Карпати?</h2>
+          <p class="contact__lead">
+            Напишіть або зателефонуйте нам — підкажемо найкращий маршрут під
+            вашу компанію та погоду
+          </p>
+        </div>
+        <ul class="contact__list">
+          <li class="contact__item">
+            <a href="tel:+380984112787" class="contact__link">
+              <img
+                src="img/phone_icon.svg"
+                alt="Телефон"
+                class="contact__icon"
+              />
+              <span class="contact__label">Телефон</span>
+              <span class="contact__value">+380 98 411 27 87</span>
+            </a>
+          </li>
+          <li class="contact__item">
+            <div class="contact__link">
+              <img
+                src="img/clock.svg"
+                alt="Годинник"
+                class="contact__icon"
+              />
+              <span class="contact__label">Час роботи</span>
+              <span class="contact__value">09:00 - 22:00</span>
+            </div>
+          </li>
+          <li class="contact__item">
+            <a
+              href="https://www.instagram.com/mizhirya.tour.ua?igsh=MXhzM3UzYXpuMTg1Mg=="
+              target="_blank"
+              class="contact__link"
+            >
+              <img
+                src="img/instagram_icon.svg"
+                alt="Інстаграм"
+                class="contact__icon"
+              />
+              <span class="contact__label">Instagram</span>
+              <span class="contact__value">@mizhirya.tour.ua</span>
+            </a>
+          </li>
+          <li class="contact__item">
+            <a
+              href="https://www.tiktok.com/@mizhirya.tour.ua?_r=1&_t=ZS-976MjvlQsGS"
+              target="_blank"
+              class="contact__link"
+            >
+              <img
+                src="img/tiktok_icon.svg"
+                alt="Тікток"
+                class="contact__icon"
+              />
+              <span class="contact__label">TikTok</span>
+              <span class="contact__value">@mizhirya.tour.ua</span>
+            </a>
+          </li>
+          <li class="contact__item">
+            <a
+              href="https://share.google/nPLNrK3sXlY8wKbnF"
+              target="_blank"
+              class="contact__link"
+            >
+              <img
+                src="img/facebook_icon.svg"
+                alt="Фейсбук"
+                class="contact__icon"
+              />
+              <span class="contact__label">Facebook</span>
+              <span class="contact__value">@mizhirya.tour.ua</span>
+            </a>
+          </li>
+        </ul>
+        <a href="tel:+380984112787" class="contact__button">Забронювати тур</a>
+      </section>
+
+      <footer class="footer">
+        <a href="index.html" class="footer__links">
+          <img src="img/logo.png" alt="Логотип" class="footer__logo" />
+        </a>
+        <p class="footer__copy">&copy; 2026 Міжгір'я · Джип-тур</p>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a
+              href="https://www.tiktok.com/@mizhirya.tour.ua?_r=1&_t=ZS-976MjvlQsGS"
+              target="_blank"
+              class="footer__link"
+              ><img
+                src="img/tiktok_icon_white.svg"
+                alt="Тікток"
+                class="footer__icon"
+            /></a>
+          </li>
+          <li class="footer__item">
+            <a
+              href="https://www.instagram.com/mizhirya.tour.ua?igsh=MXhzM3UzYXpuMTg1Mg=="
+              target="_blank"
+              class="footer__link"
+              ><img
+                src="img/instagram_icon_white.svg"
+                alt="Інстаграм"
+                class="footer__icon"
+            /></a>
+          </li>
+          <li class="footer__item">
+            <a
+              href="https://share.google/nPLNrK3sXlY8wKbnF"
+              target="_blank"
+              class="footer__link"
+              ><img
+                src="img/facebook_icon_white.svg.svg"
+                alt="Фейсбук"
+                class="footer__icon"
+            /></a>
+          </li>
+        </ul>
+      </footer>
+
+      <a href="tel:+380984112787" class="floating-phone" aria-label="Зателефонувати та замовити тур">
+        <span class="floating-phone__pulse"></span>
+        <img src="img/phone_icon.svg" alt="" class="floating-phone__icon" />
+      </a>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

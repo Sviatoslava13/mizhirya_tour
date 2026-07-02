@@ -1,0 +1,48 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", "Unbounded";
+  font-size: 18px;
+  line-height: auto;
+  color: #FAF5EA;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+       margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Unbounded";
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+input, textarea, select {
+  font: inherit;
+}

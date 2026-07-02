@@ -1,0 +1,174 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('#menu-toggle');
+    const navLinks = document.querySelectorAll('.nav__link');
+    const routeDetails = {
+      'pysanyi-kamin': {
+        title: 'Писаний Камінь',
+        image: 'img/kamin_p.JPG',
+        text: 'Місце сили серед карпатських скель із давніми написами та широкими панорамами. Маршрут підійде для красивих фото, спокійної прогулянки й першого знайомства з гірськими краєвидами.'
+      },
+      krynta: {
+        title: 'Полонина Кринта',
+        image: 'img/Полонина Кринта.jpg',
+        text: 'На Полонині Кринта є сироварня, де можна побачити місцеві традиції та скуштувати справжні карпатські сири, бринзу й інші гуцульські смаколики. Також тут можна зробити фото на фоні гірських хребтів і відпочити в тиші полонини.'
+      },
+      bendzhola: {
+        title: 'Гора Бенджола',
+        image: 'img/Гора Бенджола.jpg',
+        text: 'Дорогою на Гору Бенджола ви відвідаєте ще одну цікаву локацію — Гуцульські Гринди. Там є розваги для дітей, а також колиба, де можна відпочити, поїсти й провести час у затишній атмосфері Карпат.'
+      },
+      'bila-kobyla': {
+        title: 'Гора Біла Кобила',
+        image: 'img/Гора Біла Кобила.png',
+        text: 'Маршрут веде на відкритий трав’янистий хребет із панорамами Чорногори та Гриняви. Це гарний варіант для тих, хто хоче побачити простір Карпат, відчути висоту й повернутися з яскравими фото.'
+      },
+      psarivka: {
+        title: 'Полонина Псарівка',
+        image: 'img/Полонина Псарівка.png',
+        text: 'Полонина Псарівка відкриває справжній дух гір: зелені схили, тиша, традиційне пастуше життя та краєвиди, які добре підходять для спокійного сімейного відпочинку.'
+      },
+      snidavka: {
+        title: 'Снідавка',
+        image: 'img/Снідавка.png',
+        text: 'Під час туру до Снідавки можна відвідати ще одну відому локацію — Терношорську Ладу. Це особливе місце з символічною атмосферою, красивими краєвидами та відчуттям спокою серед карпатської природи.'
+      },
+      pamir: {
+        title: 'Памір — гора Томнатик',
+        image: 'img/pamir.JPG',
+        text: 'Памір славиться білими куполами колишньої радіолокаційної станції на горі Томнатик. Це складний високогірний маршрут із лісовими підйомами, відкритими хребтами та масштабними панорамами Буковинських Карпат. Сюди їдуть не лише за природою, а й за незвичною атмосферою місця, яке виглядає майже космічно.'
+      },
+      maksymets: {
+        title: 'Полонина Максимець',
+        image: 'img/maksymets.jpeg',
+        text: 'Полонина Максимець славиться фотозонами та гойдалками над горами: є гойдалка 360 градусів, ще одна велика гойдалка та інші місця для красивих фото. Це складний маршрут із гірськими дорогами, відкритими краєвидами та відчуттям висоти, тому він добре підходить для тих, хто хоче більше вражень і драйву.'
+      },
+      kostrycha: {
+        title: 'Полонина Кострича',
+        image: 'img/kostrich.jpg',
+        text: 'Полонина Кострича відома своїми видами на Чорногірський хребет, зеленими полонинами та спокійною атмосферою високих Карпат. Маршрут цінують за простір, тишу, свіже повітря та можливість побачити гори без поспіху. Це гарний варіант для фото, прогулянки й відпочинку від міського шуму.'
+      },
+      burkut: {
+        title: 'Буркут',
+        image: 'img/burkut.jpeg',
+        text: 'Буркут славиться своєю водою та джерелами, заради яких сюди приїжджають гості. Маршрут проходить через лісові дороги й атмосферні гірські місця, де можна зупинитися, набрати води, зробити фото та відпочити серед природи. Це не просто краєвиди, а локація з характером і власною історією.'
+      }
+    };
+    const hotelModalDelay = 30000;
+    let hotelModalShown = false;
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        if (menuToggle) {
+          menuToggle.checked = false;
+        }
+      });
+    });
+
+    const modal = document.querySelector('#route-modal');
+    const modalTitle = modal?.querySelector('.route-modal__title');
+    const modalText = modal?.querySelector('.route-modal__text');
+    const modalImage = modal?.querySelector('.route-modal__image');
+    const modalButtons = document.querySelectorAll('[data-route-modal]');
+    const closeButtons = document.querySelectorAll('[data-modal-close]');
+
+    function closeModal() {
+      if (!modal) return;
+
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+    }
+
+    modalButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const route = routeDetails[button.dataset.routeModal];
+
+        if (!modal || !route || !modalTitle || !modalText || !modalImage) return;
+
+        modalTitle.textContent = route.title;
+        modalText.textContent = route.text;
+        modalImage.src = route.image;
+        modalImage.alt = route.title;
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+      });
+    });
+
+    closeButtons.forEach((button) => {
+      button.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        closeModal();
+        closeHotelModal();
+      }
+    });
+
+    const hotelModal = document.querySelector('#hotel-modal');
+    const hotelCloseButtons = document.querySelectorAll('[data-hotel-close]');
+
+    function closeHotelModal() {
+      if (!hotelModal) return;
+
+      hotelModal.classList.remove('is-open');
+      hotelModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+    }
+
+    function openHotelModal() {
+      if (!hotelModal || hotelModalShown) return;
+
+      if (modal?.classList.contains('is-open')) {
+        setTimeout(openHotelModal, 15000);
+        return;
+      }
+
+      hotelModalShown = true;
+      hotelModal.classList.add('is-open');
+      hotelModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+    }
+
+    hotelCloseButtons.forEach((button) => {
+      button.addEventListener('click', closeHotelModal);
+    });
+
+    setTimeout(openHotelModal, hotelModalDelay);
+
+    const track = document.querySelector('.cars__track');
+    if (!track) return;
+  
+    const images = track.querySelectorAll('.cars__image');
+    if (images.length <= 1) return;
+  
+    // Клонуємо першу картинку і додаємо її в кінець для безшовного ефекту
+    const firstClone = images[0].cloneNode(true);
+    track.appendChild(firstClone);
+  
+    let currentIndex = 0;
+    const intervalTime = 3000; // Інтервал зміни (3 секунди)
+    const slideCount = images.length; // Кількість оригінальних картинок
+  
+    function nextSlide() {
+      currentIndex++;
+      
+      // Вмикаємо плавну анімацію для звичайного кроку вліво
+      track.style.transition = 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
+      track.style.transform = `translate3d(-${currentIndex * 100}%, 0, 0)`;
+  
+      // Якщо ми доїхали до клону (який стоїть після останньої картинки)
+      if (currentIndex === slideCount) {
+        setTimeout(() => {
+          // Миттєво, без анімації, повертаємося на справжній перший слайд
+          track.style.transition = 'none';
+          currentIndex = 0;
+          track.style.transform = `translate3d(0, 0, 0)`;
+        }, 800); // Час має точно збігатися з тривалістю transition (0.8s)
+      }
+    }
+  
+    // Запуск циклу
+    setInterval(nextSlide, intervalTime);
+  });
