@@ -17,8 +17,8 @@ body {
   position: fixed;
   z-index: 1000;
 }
-.header__link{
-      z-index: 10000000;
+.header__link {
+  z-index: 10000000;
 }
 .header__logo {
   width: 150px;
@@ -52,7 +52,7 @@ body {
 
 .nav__link:hover {
   font-size: 20px;
-  color: #007A7A;
+  color: #007a7a;
   background: #faf5ea;
   border-radius: 100px;
   padding: 15px 30px 15px 30px;
@@ -65,21 +65,25 @@ body {
   font-family: Inter;
   font-weight: 600;
   font-size: 14px;
-  color: #18302F;
+  color: #18302f;
   transition: all 0.3s ease;
 }
 
 .header__button:hover {
   font-size: 20px;
-  background: #007A7A;
+  background: #007a7a;
   color: inherit;
+}
+
+.nav__booking {
+  display: none;
 }
 
 .hero {
   width: 100%;
   display: flex;
   align-items: center;
-  background: #102625;
+  background: #102625 url("../img/car-1.png") center/cover no-repeat;
   padding-top: 70px;
   padding-left: 24px;
   padding-right: 24px;
@@ -131,7 +135,7 @@ body {
 }
 
 .hero__title-accent {
-  color: #009F9F;
+  color: #009f9f;
 }
 
 .hero__lead {
@@ -155,7 +159,7 @@ body {
   border: none;
   font-weight: 600;
   font-size: 16px;
-  color: #18302F;
+  color: #18302f;
   background: #faf5ea;
   margin-right: 16px;
   transition: all 0.3s ease;
@@ -163,7 +167,7 @@ body {
 
 .hero__button-cream:hover {
   font-size: 25px;
-  background: #007A7A;
+  background: #007a7a;
   color: #faf5ea;
 }
 
@@ -183,7 +187,7 @@ body {
   font-size: 25px;
   background: #faf5ea;
   border: none;
-  color: #18302F;
+  color: #18302f;
 }
 
 .hero__stats {
@@ -235,27 +239,27 @@ body {
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
-  color: #007A7A;
+  color: #007a7a;
 }
 
 .about__title {
   font-weight: 700;
   font-size: 48px;
-  color: #18302F;
+  color: #18302f;
   margin-top: 12px;
 }
 
 .about__lead {
   font-weight: 400;
   font-size: 18px;
-  color: #1E2927CC;
+  color: #1e2927cc;
   margin-top: 88px;
 }
 
 .about__muted {
   font-weight: 400;
   font-size: 16px;
-  color: #5D6A66;
+  color: #5d6a66;
   margin-top: 23px;
 }
 
@@ -263,17 +267,17 @@ body {
   display: flex;
   margin-top: 35px;
   flex-wrap: wrap;
-    gap: 20px;
+  gap: 20px;
 }
 
 .about__item {
-  background: #E6F3EF;
-  color: #18302F;
+  background: #e6f3ef;
+  color: #18302f;
   padding: 8px 16px;
   border-radius: 999px;
   font-size: 14px;
   font-weight: 500;
-  border: 1px solid #D6DED8;
+  border: 1px solid #d6ded8;
   /* margin-right: 12px; */
 }
 
@@ -297,7 +301,7 @@ body {
 .about__badge {
   display: flex;
   flex-direction: column;
-  background: #18302F;
+  background: #18302f;
   padding: 20px;
   border-radius: 16px;
   width: 21%;
@@ -362,7 +366,7 @@ body {
   width: 203px;
   height: 48px;
   border-radius: 100px;
-  background: #009F9F;
+  background: #009f9f;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -383,7 +387,7 @@ body {
 }
 
 .location__eyebrow {
-  color: #007A7A;
+  color: #007a7a;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -393,14 +397,14 @@ body {
 .location__title {
   font-weight: 700;
   font-size: 48px;
-  color: #18302F;
+  color: #18302f;
   margin-top: 12px;
 }
 
 .location__lead {
   font-size: 18px;
   margin-top: 16px;
-  color: #1E2927CC;
+  color: #1e2927cc;
   margin-top: 88px;
 }
 
@@ -416,7 +420,7 @@ body {
   flex-direction: column;
   width: 48%;
   background: #fefbf6;
-  border: 1px solid #D6DED8;
+  border: 1px solid #d6ded8;
   padding: 20px;
   border-radius: 12px;
 }
@@ -430,27 +434,27 @@ body {
 .location__title-item {
   font-weight: 600;
   font-size: 16px;
-  color: #18302F;
+  color: #18302f;
   margin-bottom: 8px;
 }
 
 .location__text-item {
   font-weight: 400;
   font-size: 14px;
-  color: #5D6A66;
+  color: #5d6a66;
 }
 
 .location__text {
   font-weight: 600;
   font-size: 14px;
-  color: #5D6A66;
+  color: #5d6a66;
   margin-top: 25px;
 }
 
 .location__arrow {
   font-weight: bold;
   font-size: 14px;
-  color: #18302F;
+  color: #18302f;
 }
 
 .tours {
@@ -476,13 +480,13 @@ body {
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
-  color: #007A7A;
+  color: #007a7a;
 }
 
 .tours__title {
   font-weight: 700;
   font-size: 48px;
-  color: #18302F;
+  color: #18302f;
   margin-top: 12px;
   text-align: center;
 }
@@ -491,7 +495,7 @@ body {
   width: 45%;
   font-weight: 400;
   font-size: 16px;
-  color: #5D6A66;
+  color: #5d6a66;
   margin-top: 24px;
   text-align: center;
 }
@@ -521,7 +525,7 @@ body {
   font-weight: 600;
   font-size: 12px;
   text-transform: uppercase;
-  color: #007A7A;
+  color: #007a7a;
   margin-bottom: 12px;
 }
 
@@ -532,7 +536,7 @@ body {
   width: 35px;
   height: 35px;
   border-radius: 100px;
-  background: #18302F;
+  background: #18302f;
   font-family: Unbounded;
   font-weight: 600;
   font-size: 14px;
@@ -544,14 +548,14 @@ body {
 .route__title {
   font-weight: 700;
   font-size: 36px;
-  color: #18302F;
+  color: #18302f;
 }
 
 .route__text {
   font-weight: 400;
   font-size: 18px;
-  color: #1E2927CC;
-  margin-top: 72px;
+  color: #1e2927cc;
+  margin-top: 40px;
 }
 
 .route__list {
@@ -564,13 +568,13 @@ body {
 .route__item {
   display: flex;
   align-items: center;
-  background: #E6F3EF;
-  color: #18302F;
+  background: #e6f3ef;
+  color: #18302f;
   padding: 8px 16px;
   border-radius: 999px;
   font-size: 14px;
   font-weight: 500;
-  border: 1px solid #D6DED8;
+  border: 1px solid #d6ded8;
   margin-right: 12px;
   gap: 6px;
 }
@@ -579,9 +583,9 @@ body {
   width: fit-content;
   margin-top: 28px;
   padding: 14px 28px;
-  border: 1px solid #007A7A;
+  border: 1px solid #007a7a;
   border-radius: 999px;
-  background: #007A7A;
+  background: #007a7a;
   color: #faf5ea;
   font-weight: 700;
   font-size: 15px;
@@ -590,8 +594,8 @@ body {
 }
 
 .route__button:hover {
-  background: #18302F;
-  border-color: #18302F;
+  background: #18302f;
+  border-color: #18302f;
 }
 
 .route__media {
@@ -610,8 +614,8 @@ body {
 
   box-shadow: 0px 25px 50px -12px #00000040;
 }
-.media__image--b{
-    object-position: 50% 100%;
+.media__image--b {
+  object-position: 50% 100%;
 }
 .route:nth-child(7) .media__image {
   object-position: 0% 40%;
@@ -638,7 +642,7 @@ body {
 .media__time {
   display: flex;
   align-items: center;
-  background: #18302Fc7;
+  background: #18302fc7;
   padding: 8px 16px;
   width: 130px;
   border-radius: 999px;
@@ -697,7 +701,7 @@ body {
   height: 40px;
   border: none;
   border-radius: 100px;
-  background: #18302F;
+  background: #18302f;
   color: #faf5ea;
   font-size: 28px;
   line-height: 1;
@@ -723,21 +727,21 @@ body {
   font-weight: 700;
   font-size: 13px;
   text-transform: uppercase;
-  color: #007A7A;
+  color: #007a7a;
   margin-bottom: 12px;
 }
 
 .route-modal__title {
   font-weight: 700;
   font-size: 34px;
-  color: #18302F;
+  color: #18302f;
   margin-bottom: 24px;
 }
 
 .route-modal__text {
   font-size: 17px;
   line-height: 1.7;
-  color: #1E2927CC;
+  color: #1e2927cc;
 }
 
 .hotel-modal {
@@ -786,7 +790,7 @@ body {
   height: 40px;
   border: none;
   border-radius: 100px;
-  background: #18302F;
+  background: #18302f;
   color: #faf5ea;
   font-size: 28px;
   line-height: 1;
@@ -817,21 +821,21 @@ body {
   font-weight: 700;
   font-size: 13px;
   text-transform: uppercase;
-  color: #007A7A;
+  color: #007a7a;
   margin-bottom: 12px;
 }
 
 .hotel-modal__title {
   font-weight: 700;
   font-size: 32px;
-  color: #18302F;
+  color: #18302f;
   margin-bottom: 20px;
 }
 
 .hotel-modal__text {
   font-size: 17px;
   line-height: 1.7;
-  color: #1E2927CC;
+  color: #1e2927cc;
   margin-bottom: 28px;
 }
 
@@ -839,14 +843,14 @@ body {
   width: fit-content;
   padding: 14px 28px;
   border-radius: 999px;
-  background: #007A7A;
+  background: #007a7a;
   color: #faf5ea;
   font-weight: 700;
   transition: all 0.3s ease;
 }
 
 .hotel-modal__button:hover {
-  background: #18302F;
+  background: #18302f;
 }
 
 body.modal-open {
@@ -863,7 +867,7 @@ body.modal-open {
   width: 62px;
   height: 62px;
   border-radius: 100px;
-  background: #007A7A;
+  background: #007a7a;
   box-shadow: 0 14px 35px rgba(0, 122, 122, 0.45);
   z-index: 2200;
   animation: phone-bounce 2.4s ease-in-out infinite;
@@ -928,13 +932,13 @@ body.modal-open {
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
-  color: #007A7A;
+  color: #007a7a;
 }
 
 .highlights__title {
   font-weight: 700;
   font-size: 48px;
-  color: #18302F;
+  color: #18302f;
   margin-top: 12px;
   text-align: center;
 }
@@ -943,7 +947,7 @@ body.modal-open {
   width: 45%;
   font-weight: 400;
   font-size: 16px;
-  color: #5D6A66;
+  color: #5d6a66;
   margin-top: 24px;
   text-align: center;
 }
@@ -958,7 +962,7 @@ body.modal-open {
 
 .highlights__item {
   background: #fefbf6;
-  border: 1px solid #D6DED8;
+  border: 1px solid #d6ded8;
   border-radius: 16px;
   padding: 29px 29px;
 }
@@ -968,14 +972,14 @@ body.modal-open {
 }
 
 .highlights__subtitle {
-  color: #18302F;
+  color: #18302f;
   margin-bottom: 12px;
 }
 
 .highlights__text {
   font-weight: 400;
   font-size: 14px;
-  color: #5D6A66;
+  color: #5d6a66;
 }
 
 .cars {
@@ -986,7 +990,7 @@ body.modal-open {
   flex-direction: column;
   padding-left: 24px;
   padding-right: 24px;
-  background: #18302F;
+  background: #18302f;
 }
 
 .cars__box {
@@ -1002,7 +1006,7 @@ body.modal-open {
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
-  color: #007A7A;
+  color: #007a7a;
 }
 
 .cars__title {
@@ -1057,7 +1061,7 @@ body.modal-open {
 
 .cars__item {
   background: #fefbf6;
-  border: 1px solid #D6DED8;
+  border: 1px solid #d6ded8;
   border-radius: 16px;
   padding: 29px 29px;
 }
@@ -1067,14 +1071,14 @@ body.modal-open {
 }
 
 .cars__subtitle {
-  color: #18302F;
+  color: #18302f;
   margin-bottom: 12px;
 }
 
 .cars__text {
   font-weight: 400;
   font-size: 14px;
-  color: #5D6A66;
+  color: #5d6a66;
 }
 
 .gallery {
@@ -1100,14 +1104,14 @@ body.modal-open {
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
-  color: #007A7A;
+  color: #007a7a;
 }
 
 .gallery__title {
   font-weight: 700;
   font-size: 48px;
   margin-top: 12px;
-  color: #18302F;
+  color: #18302f;
   text-align: center;
 }
 
@@ -1141,7 +1145,7 @@ body.modal-open {
   flex-direction: column;
   padding-left: 24px;
   padding-right: 24px;
-  background: #18302Fd9;
+  background: #18302fd9;
   align-items: center;
 }
 
@@ -1158,7 +1162,7 @@ body.modal-open {
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
-  color: #009F9F;
+  color: #009f9f;
 }
 
 .contact__title {
@@ -1238,7 +1242,7 @@ body.modal-open {
   align-items: center;
   padding: 15px 30px 15px 30px;
   border-radius: 100px;
-  background: #009F9F;
+  background: #009f9f;
   font-weight: 600;
   font-size: 18px;
   margin-top: 40px;
@@ -1250,12 +1254,12 @@ body.modal-open {
   width: 20%;
   font-size: 25px;
   background: #faf5ea;
-  color: #007A7A;
+  color: #007a7a;
 }
 
 .footer {
   width: 100%;
-  background: #18302F;
+  background: #18302f;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1296,4 +1300,8 @@ body.modal-open {
 
 .burger {
   display: none;
+}
+
+.location__link:hover {
+  background-color: #18302f;
 }

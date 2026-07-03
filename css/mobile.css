@@ -1,4 +1,9 @@
 @media screen and (max-width: 744px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   .header {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -9,13 +14,13 @@
 
   .tton:hover {
     font-size: 14px;
-    background: #007A7A;
+    background: #007a7a;
     color: inherit;
   }
 
   .hero__button-cream:hover {
     font-size: 16px;
-    background: #007A7A;
+    background: #007a7a;
     color: #faf5ea;
   }
 
@@ -23,17 +28,43 @@
     font-size: 16px;
     background: #faf5ea;
     border: none;
-    color: #18302F;
+    color: #18302f;
   }
 
   .nav {
     width: 100%;
+    text-align: center;
+    right: -100%;
+    transform: none;
+  }
+
+  .menu-toggle:checked ~ .nav {
+    right: 0;
   }
 
   .nav__list {
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    flex-wrap: nowrap;
+    gap: 28px;
+  }
+
+  .nav__link {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .header__box > .header__button {
+    display: none;
+  }
+
+  .nav__booking {
+    display: flex;
+    width: max-content;
+    margin: 30px auto 0;
+    justify-content: center;
+    text-align: center;
   }
 
   .hero__box {
@@ -48,7 +79,7 @@
     width: 100%;
   }
   .about__list {
-        gap: 0;
+    gap: 0;
     flex-direction: column;
   }
   .about__item {
@@ -56,9 +87,8 @@
     text-align: center;
     font-size: 16px;
     font-weight: 600;
-
   }
-  
+
   .about__item:not(:last-child) {
     margin-bottom: 20px;
   }
@@ -195,23 +225,39 @@
     margin: 10px 0 20px 0;
   }
 
-.cars__slider {
-  margin-bottom: 24px;
-  width: 100%;
-  border-radius: 24px; 
-  overflow: hidden;
-}
+  .cars__slider {
+    margin-bottom: 24px;
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+  }
 
-.cars__slider .cars__image {
-  aspect-ratio:3 / 4; 
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+  .cars__slider .cars__image {
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 
-@media (max-width: 390px) {
-  .stats__num {
-    font-size: 28px;
+  @media (max-width: 390px) {
+    .stats__num {
+      font-size: 28px;
+    }
   }
 }
+
+@media screen and (max-width: 379px) {
+  .stats__num {
+    font-size: 24px;
+  }
+  .hero__title {
+    font-size: 42px;
+  }
+  .hero__buttons {
+    flex-direction: column;
+  }
+  .hero__button-cream {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }

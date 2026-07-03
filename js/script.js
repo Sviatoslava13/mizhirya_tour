@@ -1,6 +1,66 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('#menu-toggle');
-    const navLinks = document.querySelectorAll('.nav__link');
+    const burgerButton = document.querySelector('.burger');
+    const navActions = document.querySelectorAll('.nav__link, .nav__booking');
+    const heroVideo = document.querySelector('.hero__video');
+
+    function loadHeroVideo() {
+      if (!heroVideo || heroVideo.dataset.loaded === 'true') return;
+
+      const sources = heroVideo.querySelectorAll('source[data-src]');
+      sources.forEach((source) => {
+        source.src = source.dataset.src;
+        source.removeAttribute('data-src');
+      });
+
+      heroVideo.dataset.loaded = 'true';
+      heroVideo.load();
+      heroVideo.play().catch(() => {});
+    }
+
+    window.addEventListener('load', () => {
+      window.requestIdleCallback
+        ? window.requestIdleCallback(loadHeroVideo, { timeout: 1500 })
+        : setTimeout(loadHeroVideo, 800);
+    });
+
+    function setMenuState(isOpen) {
+      if (burgerButton) {
+        burgerButton.setAttribute('aria-expanded', String(isOpen));
+        burgerButton.setAttribute(
+          'aria-label',
+          isOpen ? 'Закрити меню' : 'Відкрити меню'
+        );
+      }
+    }
+
+    if (menuToggle) {
+      setMenuState(menuToggle.checked);
+
+      menuToggle.addEventListener('change', () => {
+        setMenuState(menuToggle.checked);
+      });
+    }
+
+    if (burgerButton && menuToggle) {
+      burgerButton.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+
+        event.preventDefault();
+        menuToggle.checked = !menuToggle.checked;
+        setMenuState(menuToggle.checked);
+      });
+    }
+
+    navActions.forEach((link) => {
+      link.addEventListener('click', () => {
+        if (menuToggle) {
+          menuToggle.checked = false;
+          setMenuState(false);
+        }
+      });
+    });
+
     const routeDetails = {
       'pysanyi-kamin': {
         title: 'Писаний Камінь',
@@ -9,27 +69,27 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       krynta: {
         title: 'Полонина Кринта',
-        image: 'img/Полонина Кринта.jpg',
+        image: 'img/krynta-meadow.jpg',
         text: 'На Полонині Кринта є сироварня, де можна побачити місцеві традиції та скуштувати справжні карпатські сири, бринзу й інші гуцульські смаколики. Також тут можна зробити фото на фоні гірських хребтів і відпочити в тиші полонини.'
       },
       bendzhola: {
         title: 'Гора Бенджола',
-        image: 'img/Гора Бенджола.jpg',
+        image: 'img/bendzhola-mountain.jpg',
         text: 'Дорогою на Гору Бенджола ви відвідаєте ще одну цікаву локацію — Гуцульські Гринди. Там є розваги для дітей, а також колиба, де можна відпочити, поїсти й провести час у затишній атмосфері Карпат.'
       },
       'bila-kobyla': {
         title: 'Гора Біла Кобила',
-        image: 'img/Гора Біла Кобила.png',
+        image: 'img/horse.JPG',
         text: 'Маршрут веде на відкритий трав’янистий хребет із панорамами Чорногори та Гриняви. Це гарний варіант для тих, хто хоче побачити простір Карпат, відчути висоту й повернутися з яскравими фото.'
       },
       psarivka: {
         title: 'Полонина Псарівка',
-        image: 'img/Полонина Псарівка.png',
+        image: 'img/psarivka-meadow.png',
         text: 'Полонина Псарівка відкриває справжній дух гір: зелені схили, тиша, традиційне пастуше життя та краєвиди, які добре підходять для спокійного сімейного відпочинку.'
       },
       snidavka: {
         title: 'Снідавка',
-        image: 'img/Снідавка.png',
+        image: 'img/snidavka.png',
         text: 'Під час туру до Снідавки можна відвідати ще одну відому локацію — Терношорську Ладу. Це особливе місце з символічною атмосферою, красивими краєвидами та відчуттям спокою серед карпатської природи.'
       },
       pamir: {
@@ -56,14 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const hotelModalDelay = 30000;
     let hotelModalShown = false;
 
-    navLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        if (menuToggle) {
-          menuToggle.checked = false;
-        }
-      });
-    });
-
     const modal = document.querySelector('#route-modal');
     const modalTitle = modal?.querySelector('.route-modal__title');
     const modalText = modal?.querySelector('.route-modal__text');
@@ -76,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       modal.classList.remove('is-open');
       modal.setAttribute('aria-hidden', 'true');
+      modal.setAttribute('inert', '');
       document.body.classList.remove('modal-open');
     }
 
@@ -91,6 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalImage.alt = route.title;
         modal.classList.add('is-open');
         modal.setAttribute('aria-hidden', 'false');
+        modal.removeAttribute('inert');
         document.body.classList.add('modal-open');
       });
     });
@@ -114,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       hotelModal.classList.remove('is-open');
       hotelModal.setAttribute('aria-hidden', 'true');
+      hotelModal.setAttribute('inert', '');
       document.body.classList.remove('modal-open');
     }
 
@@ -128,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hotelModalShown = true;
       hotelModal.classList.add('is-open');
       hotelModal.setAttribute('aria-hidden', 'false');
+      hotelModal.removeAttribute('inert');
       document.body.classList.add('modal-open');
     }
 
@@ -135,7 +191,9 @@ document.addEventListener('DOMContentLoaded', () => {
       button.addEventListener('click', closeHotelModal);
     });
 
-    setTimeout(openHotelModal, hotelModalDelay);
+    window.addEventListener('load', () => {
+      setTimeout(openHotelModal, hotelModalDelay);
+    });
 
     const track = document.querySelector('.cars__track');
     if (!track) return;
@@ -143,32 +201,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const images = track.querySelectorAll('.cars__image');
     if (images.length <= 1) return;
   
-    // Клонуємо першу картинку і додаємо її в кінець для безшовного ефекту
     const firstClone = images[0].cloneNode(true);
     track.appendChild(firstClone);
   
     let currentIndex = 0;
-    const intervalTime = 3000; // Інтервал зміни (3 секунди)
-    const slideCount = images.length; // Кількість оригінальних картинок
+    const intervalTime = 3000;
+    const slideCount = images.length; 
   
     function nextSlide() {
       currentIndex++;
       
-      // Вмикаємо плавну анімацію для звичайного кроку вліво
       track.style.transition = 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
       track.style.transform = `translate3d(-${currentIndex * 100}%, 0, 0)`;
   
-      // Якщо ми доїхали до клону (який стоїть після останньої картинки)
       if (currentIndex === slideCount) {
         setTimeout(() => {
-          // Миттєво, без анімації, повертаємося на справжній перший слайд
           track.style.transition = 'none';
           currentIndex = 0;
           track.style.transform = `translate3d(0, 0, 0)`;
-        }, 800); // Час має точно збігатися з тривалістю transition (0.8s)
+        }, 800); 
       }
     }
-  
-    // Запуск циклу
+
     setInterval(nextSlide, intervalTime);
   });
